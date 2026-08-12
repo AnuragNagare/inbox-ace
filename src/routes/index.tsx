@@ -164,7 +164,7 @@ function HeroSection() {
               width={1344}
               height={768}
               className="relative rounded-2xl border border-border bg-card shadow-2xl"
-              priority
+              loading="eager"
             />
           </div>
         </div>
