@@ -595,7 +595,7 @@ function FinalCTASection() {
             </p>
             <a
               href="#pricing"
-              className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-primary-foreground px-8 py-4 text-base font-semibold text-primary shadow-lg transition-all hover:bg-white"
+              className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-primary-foreground px-8 py-4 text-base font-semibold text-primary shadow-lg transition-all hover:bg-cream-dark"
             >
               Start your 14-day free trial
               <ArrowRight className="h-4 w-4" />
