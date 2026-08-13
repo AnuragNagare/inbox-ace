@@ -211,3 +211,8 @@
     -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   }
 }
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(-1.5deg); }
+}
