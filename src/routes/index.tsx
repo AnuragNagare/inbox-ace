@@ -52,12 +52,18 @@ function LandingPage() {
         <HeroSection />
         <TrustBar />
         <ProblemSection />
+        <InboxScoreboard />
+        <StatsStrip />
         <FeaturesSection />
+        <ComparisonSection />
         <HowItWorksSection />
+        <TestimonialsSection />
         <PricingSection />
+        <SecuritySection />
         <FAQSection />
         <FinalCTASection />
       </main>
+
       <Footer />
     </div>
   );
