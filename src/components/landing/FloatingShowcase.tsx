@@ -34,7 +34,7 @@ export function FloatingShowcase() {
     <section className="relative overflow-hidden px-6 py-24 sm:py-32">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-teal-light/50 blur-3xl"
+        className="pointer-events-none absolute left-1/2 top-4 h-[300px] w-[700px] -translate-x-1/2 rounded-full bg-teal-light/40 blur-3xl"
       />
       <div className="relative mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
@@ -54,10 +54,6 @@ export function FloatingShowcase() {
           {items.map((item) => (
             <div key={item.title} className="group text-center">
               <div className="relative mx-auto flex h-52 w-52 items-center justify-center">
-                <div
-                  aria-hidden
-                  className="absolute inset-8 rounded-full bg-teal-light/60 blur-2xl"
-                />
                 <img
                   src={item.img}
                   alt={item.title}
