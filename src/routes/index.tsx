@@ -61,6 +61,7 @@ function LandingPage() {
         <HeroSection />
         <TrustBar />
         <ProblemSection />
+        <FloatingShowcase />
         <InboxScoreboard />
         <StatsStrip />
         <FeaturesSection />
