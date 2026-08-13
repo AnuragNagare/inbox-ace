@@ -56,7 +56,7 @@ export function FloatingShowcase() {
               <div className="relative mx-auto flex h-52 w-52 items-center justify-center">
                 <div
                   aria-hidden
-                  className="absolute inset-6 rounded-full bg-teal-light/70 blur-2xl transition-opacity group-hover:opacity-100"
+                  className="absolute inset-8 rounded-full bg-teal-light/60 blur-2xl"
                 />
                 <img
                   src={item.img}
@@ -64,7 +64,7 @@ export function FloatingShowcase() {
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  className="relative h-full w-full object-contain drop-shadow-xl [animation:float-soft_7s_ease-in-out_infinite] transition-transform duration-500 group-hover:scale-105"
+                  className="relative h-full w-full object-contain mix-blend-multiply [animation:float-soft_7s_ease-in-out_infinite] transition-transform duration-500 group-hover:scale-105"
                   style={{ animationDelay: item.delay }}
                 />
               </div>
