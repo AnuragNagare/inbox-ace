@@ -16,6 +16,14 @@ import {
 import { useState } from "react";
 
 import heroImage from "@/assets/hero.jpg";
+import { InboxScoreboard } from "@/components/landing/InboxScoreboard";
+import {
+  StatsStrip,
+  ComparisonSection,
+  TestimonialsSection,
+  SecuritySection,
+} from "@/components/landing/Extras";
+
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
@@ -52,12 +60,18 @@ function LandingPage() {
         <HeroSection />
         <TrustBar />
         <ProblemSection />
+        <InboxScoreboard />
+        <StatsStrip />
         <FeaturesSection />
+        <ComparisonSection />
         <HowItWorksSection />
+        <TestimonialsSection />
         <PricingSection />
+        <SecuritySection />
         <FAQSection />
         <FinalCTASection />
       </main>
+
       <Footer />
     </div>
   );
