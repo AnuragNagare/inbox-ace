@@ -17,6 +17,7 @@ import { useState } from "react";
 
 import heroImage from "@/assets/hero.jpg";
 import { InboxScoreboard } from "@/components/landing/InboxScoreboard";
+import { FloatingShowcase } from "@/components/landing/FloatingShowcase";
 import {
   StatsStrip,
   ComparisonSection,
