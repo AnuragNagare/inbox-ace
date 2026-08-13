@@ -53,14 +53,14 @@ export function FloatingShowcase() {
         <div className="mt-20 grid gap-12 lg:grid-cols-3">
           {items.map((item) => (
             <div key={item.title} className="group text-center">
-              <div className="relative mx-auto flex h-52 w-52 items-center justify-center">
+              <div className="relative mx-auto flex h-56 w-56 items-center justify-center overflow-hidden rounded-[2rem] border border-border bg-background shadow-sm">
                 <img
                   src={item.img}
                   alt={item.title}
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  className="relative h-full w-full object-contain mix-blend-multiply [animation:float-soft_7s_ease-in-out_infinite] transition-transform duration-500 group-hover:scale-105"
+                  className="relative h-full w-full object-contain scale-110 [animation:float-soft_7s_ease-in-out_infinite] transition-transform duration-500 group-hover:scale-105"
                   style={{ animationDelay: item.delay }}
                 />
               </div>
