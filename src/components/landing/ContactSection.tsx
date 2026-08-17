@@ -108,11 +108,11 @@ export function ContactSection() {
                     onChange={(e) =>
                       setFormData((prev) => ({ ...prev, name: e.target.value }))
                     }
-                    aria-invalid={!!errors.name}
+                    aria-invalid={!!errors["name"]}
                     className="rounded-xl"
                   />
-                  {errors.name && (
-                    <p className="text-sm text-destructive">{errors.name}</p>
+                  {errors["name"] && (
+                    <p className="text-sm text-destructive">{errors["name"]}</p>
                   )}
                 </div>
                 <div className="space-y-2">
@@ -128,11 +128,11 @@ export function ContactSection() {
                         email: e.target.value,
                       }))
                     }
-                    aria-invalid={!!errors.email}
+                    aria-invalid={!!errors["email"]}
                     className="rounded-xl"
                   />
-                  {errors.email && (
-                    <p className="text-sm text-destructive">{errors.email}</p>
+                  {errors["email"] && (
+                    <p className="text-sm text-destructive">{errors["email"]}</p>
                   )}
                 </div>
               </div>
@@ -163,11 +163,11 @@ export function ContactSection() {
                       message: e.target.value,
                     }))
                   }
-                  aria-invalid={!!errors.message}
+                  aria-invalid={!!errors["message"]}
                   className="resize-none rounded-xl"
                 />
-                {errors.message && (
-                  <p className="text-sm text-destructive">{errors.message}</p>
+                {errors["message"] && (
+                  <p className="text-sm text-destructive">{errors["message"]}</p>
                 )}
               </div>
 
