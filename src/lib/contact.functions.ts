@@ -29,12 +29,13 @@ export const submitContact = createServerFn({ method: "POST" })
       "@/integrations/supabase/client.server"
     );
 
-    const { error } = await supabaseAdmin.from("contact_submissions").insert({
-      name: data.name,
-      email: data.email,
-      role: data.role || null,
-      message: data.message,
-    });
+    const { error } = await (supabaseAdmin.from("contact_submissions" as any) as any)
+      .insert({
+        name: data.name,
+        email: data.email,
+        role: data.role || null,
+        message: data.message,
+      });
 
     if (error) {
       throw new Error("Failed to submit your message. Please try again.");
