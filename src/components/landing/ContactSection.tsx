@@ -20,19 +20,19 @@ export function ContactSection() {
 
   const validate = () => {
     const nextErrors: Record<string, string> = {};
-    if (!formData.name.trim()) nextErrors.name = "Name is required";
-    else if (formData.name.length > 100) nextErrors.name = "Name is too long";
+    if (!formData.name.trim()) nextErrors["name"] = "Name is required";
+    else if (formData.name.length > 100) nextErrors["name"] = "Name is too long";
 
     const email = formData.email.trim();
-    if (!email) nextErrors.email = "Email is required";
+    if (!email) nextErrors["email"] = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      nextErrors.email = "Invalid email address";
-    } else if (email.length > 255) nextErrors.email = "Email is too long";
+      nextErrors["email"] = "Invalid email address";
+    } else if (email.length > 255) nextErrors["email"] = "Email is too long";
 
-    if (!formData.message.trim()) nextErrors.message = "Message is required";
-    else if (formData.message.length > 2000) nextErrors.message = "Message is too long";
+    if (!formData.message.trim()) nextErrors["message"] = "Message is required";
+    else if (formData.message.length > 2000) nextErrors["message"] = "Message is too long";
 
-    if (formData.role && formData.role.length > 100) nextErrors.role = "Role is too long";
+    if (formData.role && formData.role.length > 100) nextErrors["role"] = "Role is too long";
 
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
