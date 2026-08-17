@@ -24,6 +24,7 @@ import {
   TestimonialsSection,
   SecuritySection,
 } from "@/components/landing/Extras";
+import { ContactSection } from "@/components/landing/ContactSection";
 
 
 export const Route = createFileRoute("/")({
@@ -71,6 +72,7 @@ function LandingPage() {
         <PricingSection />
         <SecuritySection />
         <FAQSection />
+        <ContactSection />
         <FinalCTASection />
       </main>
 
@@ -101,6 +103,9 @@ function Navbar() {
           </a>
           <a href="#faq" className="transition-colors hover:text-ink">
             FAQ
+          </a>
+          <a href="#contact" className="transition-colors hover:text-ink">
+            Contact
           </a>
         </nav>
         <div className="flex items-center gap-3">
@@ -651,6 +656,9 @@ function Footer() {
             </a>
             <a href="#faq" className="hover:text-ink">
               FAQ
+            </a>
+            <a href="#contact" className="hover:text-ink">
+              Contact
             </a>
             <a href="#" className="hover:text-ink">
               Privacy
