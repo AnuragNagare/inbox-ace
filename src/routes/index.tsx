@@ -657,6 +657,9 @@ function Footer() {
             <a href="#faq" className="hover:text-ink">
               FAQ
             </a>
+            <a href="#contact" className="hover:text-ink">
+              Contact
+            </a>
             <a href="#" className="hover:text-ink">
               Privacy
             </a>
