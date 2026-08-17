@@ -25,20 +25,33 @@ const contactSchema = z.object({
 export const submitContact = createServerFn({ method: "POST" })
   .validator((data) => contactSchema.parse(data))
   .handler(async ({ data }) => {
-    const { supabaseAdmin } = await import(
-      "@/integrations/supabase/client.server"
-    );
+    const { getSql } = await import("@/lib/db.server");
+    const { sendContactNotification } = await import("@/lib/email.server");
 
-    const { error } = await (supabaseAdmin.from("contact_submissions" as any) as any)
-      .insert({
-        name: data.name,
-        email: data.email,
-        role: data.role || null,
-        message: data.message,
-      });
+    const sql = getSql();
 
-    if (error) {
+    let id: string;
+    try {
+      const rows = await sql`
+        INSERT INTO landing.contact_submissions (name, email, role, message)
+        VALUES (${data.name}, ${data.email}, ${data.role || null}, ${data.message})
+        RETURNING id
+      `;
+      id = (rows as { id: string }[])[0]!.id;
+    } catch (error) {
+      console.error(error);
       throw new Error("Failed to submit your message. Please try again.");
+    }
+
+    // The submission is already saved — a notification-email failure shouldn't
+    // fail the request, just get logged for follow-up.
+    try {
+      await sendContactNotification(data);
+      await sql`
+        UPDATE landing.contact_submissions SET notified_at = now() WHERE id = ${id}
+      `;
+    } catch (error) {
+      console.error("Failed to send contact notification email", error);
     }
 
     return { success: true };
