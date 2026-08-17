@@ -24,6 +24,7 @@ import {
   TestimonialsSection,
   SecuritySection,
 } from "@/components/landing/Extras";
+import { ContactSection } from "@/components/landing/ContactSection";
 
 
 export const Route = createFileRoute("/")({
