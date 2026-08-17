@@ -72,6 +72,7 @@ function LandingPage() {
         <PricingSection />
         <SecuritySection />
         <FAQSection />
+        <ContactSection />
         <FinalCTASection />
       </main>
 
