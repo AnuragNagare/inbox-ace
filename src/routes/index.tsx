@@ -25,6 +25,11 @@ import {
   SecuritySection,
 } from "@/components/landing/Extras";
 import { ContactSection } from "@/components/landing/ContactSection";
+import {
+  RevenueAttributionSection,
+  LeadMemorySection,
+  NicheIntelligenceSection,
+} from "@/components/landing/Pillars";
 
 
 export const Route = createFileRoute("/")({
