@@ -71,6 +71,9 @@ function LandingPage() {
         <InboxScoreboard />
         <StatsStrip />
         <FeaturesSection />
+        <RevenueAttributionSection />
+        <LeadMemorySection />
+        <NicheIntelligenceSection />
         <ComparisonSection />
         <HowItWorksSection />
         <TestimonialsSection />
