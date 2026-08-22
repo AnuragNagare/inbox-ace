@@ -103,6 +103,9 @@ function Navbar() {
           <a href="#features" className="transition-colors hover:text-ink">
             Features
           </a>
+          <a href="#revenue" className="transition-colors hover:text-ink">
+            ROI
+          </a>
           <a href="#how-it-works" className="transition-colors hover:text-ink">
             How it works
           </a>
