@@ -25,6 +25,11 @@ import {
   SecuritySection,
 } from "@/components/landing/Extras";
 import { ContactSection } from "@/components/landing/ContactSection";
+import {
+  RevenueAttributionSection,
+  LeadMemorySection,
+  NicheIntelligenceSection,
+} from "@/components/landing/Pillars";
 
 
 export const Route = createFileRoute("/")({
@@ -66,6 +71,9 @@ function LandingPage() {
         <InboxScoreboard />
         <StatsStrip />
         <FeaturesSection />
+        <RevenueAttributionSection />
+        <LeadMemorySection />
+        <NicheIntelligenceSection />
         <ComparisonSection />
         <HowItWorksSection />
         <TestimonialsSection />
@@ -94,6 +102,9 @@ function Navbar() {
         <nav className="hidden items-center gap-8 text-sm font-medium text-ink-muted md:flex">
           <a href="#features" className="transition-colors hover:text-ink">
             Features
+          </a>
+          <a href="#revenue" className="transition-colors hover:text-ink">
+            ROI
           </a>
           <a href="#how-it-works" className="transition-colors hover:text-ink">
             How it works

@@ -46,7 +46,7 @@ export const submitContact = createServerFn({ method: "POST" })
     // The submission is already saved — a notification-email failure shouldn't
     // fail the request, just get logged for follow-up.
     try {
-      await sendContactNotification(data);
+      await sendContactNotification({ ...data, role: data.role ?? null });
       await sql`
         UPDATE landing.contact_submissions SET notified_at = now() WHERE id = ${id}
       `;
